@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style=" margin-left:40%;background-color: black;">
+    
+    <h1  style="color: white; font-size: 45px;">Weight Converter</h1>
+    <input  style="width: 350px; height: 45px;" type="number" value="0"  onkeyup="con()" onclick="con()">
+
+    <div  style="background-color: blue;width: 350px; padding: 0.5px 4.2px;">
+        <h4>Grams : </h4>
+        <h3>0</h3>
+
+    </div>
+
+
+
+    <div  style="background-color: green;width: 350px; padding: 0.5px 4.2px;">
+        <h4>KiloGrams : </h4>
+        <h3>0</h3>
+    </div>
+
+
+
+    <div  style="background-color: yellow;width: 350px; padding: 0.5px 4.2px;">
+        <h4>Ounces : </h4>
+        <h3>0</h3>
+    </div>
+
+<script>
+    
+    function con(){
+
+        var i=document.querySelector('input').value;
+        //console.log(i);
+        document.querySelectorAll('div h3')[0].innerText=i/0.0022046;
+
+        document.querySelectorAll('div h3')[1].innerText=i/2.2046;
+
+        document.querySelectorAll('div h3')[2].innerText=i*16;
+    }
+
+</script>
+
+</body>
+</html>
